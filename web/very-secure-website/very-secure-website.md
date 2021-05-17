@@ -1,5 +1,3 @@
-Magic hashes
-
 Visiting the website, we can see a login panel as well as a link to the source code of the login mechanism:
 
 ![Website](very-secure-website4.png)
