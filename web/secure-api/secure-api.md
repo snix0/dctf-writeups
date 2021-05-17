@@ -8,8 +8,10 @@ Visiting the website, we are greeted with a JSON response saying that the 'Autho
 ![Website](secure-api5.png)
 
 We manage to guess correctly and find the /login endpoint.
+```
 $ curl -X POST http://dctf1-chall-secure-api.westeurope.azurecontainer.io:8080/login
 {"Error":"Missing username or password field."}
+```
 
 We provide the username and password as `guest:guest`, per the landing page's suggestion of using a guest account. This gets us a JWT token we can use to log in as the guest user.
 ```
@@ -21,7 +23,6 @@ We will follow the website's suggestion and add in the following `Authorization`
 ```
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1c2VybmFtZSI6Imd1ZXN0IiwiZXhwIjoxNjIxMDE2NjkyfQ.v63VvzMyJ3o2oPVV72-ikLClsPOCvJzBDoNg4LtWGrjVZKxXWh0JBLOSX-srllbRMuZoj7dl1pGlVYThbE_0NQ
 ```
-
 
 After setting the Authentication header as described above, we now get a different response from the web server:
 
