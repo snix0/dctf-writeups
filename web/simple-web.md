@@ -13,7 +13,7 @@ Checking the box and clicking submit to request the flag, we get a "Not Authoriz
 
 Intercepting the request with Burp, we can see that we are sending an auth parameter with value 0 whenever we request the flag:
 
-![/flag request](simple-web3.png
+![/flag request](simple-web3.png)
 
 Change auth=0 to auth=1 to bypass authentication:
 
